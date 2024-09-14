@@ -155,7 +155,8 @@
         <div class="style1">
             <h1>Overview</h1>
             <p>
-                Target speech extraction (TSE) focuses on extracting the speech of a specific target speaker from a mixture of signals. Existing TSE models typically utilize static embeddings as conditions for extracting the target speaker’s voice. However, the static embeddings often fail to capture the contextual information of the extracted speech signal, which may limit the model’s performance. We propose a novel dynamic embedding causal target speech extraction model to address this limitation. Our approach incorporates an autoregressive mechanism to generate context-dependent embeddings based on the extracted speech, enabling real-time, frame-level extraction. Experimental results demonstrate that the proposed model enhances short-time objective intelligibility (STOI) and signal-to-distortion ratio (SDR), offering a promising solution for target speech extraction in challenging scenarios.
+                String quartet source separation poses unique challenges due to overlapping fundamental frequencies, similar timbres, and complex acoustic environments inherent in chamber music. Traditional methods typically use single-channel input, which fails to leverage the spatial information embedded in the music, resulting in suboptimal separation performance. 
+                In this paper, we present a novel approach that enhances string quartet separation by incorporating positional cues into a conditional modulation network. To evaluate our method, we create a specialized dataset of string quartet recordings. Experimental results demonstrate that our approach effectively separates the individual instruments and highlights the importance of positional encoding in improving separation quality. D
                 <img src="dense_img/ar_pairs_tse_autoregressive.png" style="width: 50%;">
             </p> 
         </div>
