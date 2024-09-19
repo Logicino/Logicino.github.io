@@ -155,6 +155,20 @@
             font-weight: bold;
             cursor: pointer;
         }
+
+        .song-list ul {
+            list-style-type: none; /* 移除列表前的默认符号 */
+            padding: 0;
+        }
+        
+        .song-list li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc; /* 为每个列表项添加底部边框 */
+        }
+        
+        .song-list button {
+            margin-left: 10px; /* 按钮与文本之间的间距 */
+        }
     </style>
 </head>
 
@@ -204,7 +218,7 @@
     <!-- Audio Demos部分，重复多次 -->
     <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
         <div class="style2">
-            <a name="audio-demos"><h1>Contrapunctus VI Demo</h1></a>
+            <a name="audio-demos"><h1>Separation Demo: Contrapunctus VI</h1></a>
                 <p>
                     (Scores just for reference)
                 </p>
@@ -262,7 +276,7 @@
     <!-- Audio Demos部分，重复多次 -->
     <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
         <div class="style2">
-            <a name="audio-demos"><h1>K464 Demo</h1></a>
+            <a name="audio-demos"><h1>Separation Demo: K464</h1></a>
                 <p>
                     (Scores just for reference)
                 </p>
@@ -343,11 +357,69 @@
             </div>
         </div>
     </div>
+
+    <!-- 模态框 (Modal) -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
     
+    <!-- 图片展示部分 -->
+    <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+        <div class="style3">
+            <a name="image-gallery"><h1>Separation Results on URMP String Quartet Test Set</h1></a>
+            <p>
+                (Click on the image to enlarge)
+            </p>
+            <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+                <!-- 重复以下div来展示更多图片 -->
+                <div class="image">
+                    <img src="img/real_data_Violin_1.png" alt="Image 1" onclick="showModal(this)">
+                </div>
+                <div class="image">
+                    <img src="img/real_data_Violin_2.png" alt="Image 2" onclick="showModal(this)">
+                </div>
+                <div class="image">
+                    <img src="img/real_data_Viola.png" alt="Image 3" onclick="showModal(this)">
+                </div>
+                <div class="image">
+                    <img src="img/real_data_Cello.png" alt="Image 3" onclick="showModal(this)">
+                </div>
+                <!-- 更多图片 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 模态框 (Modal) -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <div class="song-list">
+        <h2>EnsembleSet String Quartet Train Set List</h2>
+        <ul>
+            <li>1-aasesdeath</li>
+            <li>2-AgitatoDaFiereTempeste</li>
+            <li>3-AITardarDellaVendetta</li>
+        </ul>
+    </div>
+
+    <div class="song-list">
+        <h2>EnsembleSet String Quartet Test Set List</h2>
+        <ul>
+            <li>8-CaraSposa</li>
+            <li>16-contrapunctusVI</li>
+            <li>27-k464</li>
+            <li>31-MiseroPargoletto</li>
+            <li>51-RM-C015</li>
+            <li>59-SentiSeLIngannai</li>
+        </ul>
+    </div>
+
     
     <!-- 添加更多内容块 -->
     <!-- 你可以通过复制上面的<div class="container ...>块来重复多次 -->
-
 
 
     <script>
