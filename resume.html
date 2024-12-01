@@ -3,109 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的简历</title>
+    <title>Resume</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'SabonLTStd', serif;
+            color: #000;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            background-color: #fff;
             padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            line-height: 1.4;
         }
-        header {
-            text-align: center;
-            padding: 20px;
-            border-bottom: 1px solid #ccc;
-        }
-        header h1 {
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'CronosProLT', sans-serif;
             margin: 0;
         }
-        section {
+        .emph {
+            font-weight: bold;
+        }
+        .section {
             margin-bottom: 20px;
         }
         .section-title {
-            font-size: 24px;
-            color: #333;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
+            margin: 0;
         }
-        ul {
+        .section-content {
+            margin-left: 20px;
+        }
+        .pub-list, .award-list, .skill-list, .item-list {
+            margin-left: 0;
+            padding-left: 0;
             list-style-type: none;
-            padding: 0;
         }
-        li {
+        .edu-heading, .intern-heading, .proj-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 10px;
         }
-        .contact-info {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-        .contact-info span {
-            font-weight: bold;
-            margin-right: 10px;
+        .edu-heading > *, .intern-heading > *, .proj-heading > * {
+            margin: 0;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>我的简历</h1>
-        </header>
-        <section class="contact-info">
-            <span>Email:</span> <a href="mailto:your-email@example.com">your-email@example.com</a><br>
-            <span>Phone:</span> <a href="tel:+1234567890">+1234567890</a><br>
-            <span>LinkedIn:</span> <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
+    <div class="resume-container">
+        <!-- HEADING -->
+        <div class="heading">
+            <div class="contact-info">
+                <span>(+86) 132-1905-4963</span>
+                <span>melkior@qq.com</span>
+            </div>
+            <h1 class="name">Yuetonghui Xu</h1>
+            <h2 class="title">Ph.D. Candidate</h2>
+            <hr>
+        </div>
+
+        <!-- EDUCATION -->
+        <section class="section">
+            <h3 class="section-title">Education</h3>
+            <div class="section-content">
+                <div class="edu-item">
+                    <h4>Department of Music AI and Music Information Technology, Central Conservatory of Music (Cooperative Education with Peking University), Beijing, China</h4>
+                    <p>Ph.D. in Music AI and Music Information Technology (2022 - 2026 expected)</p>
+                    <ul>
+                        <li>Advisor: Prof. Xihong Wu (Peking University), Prof. Feng Yu (Central Conservatory of Music)</li>
+                        <li>Research area: Music Source Separation, Spatial Audio Playback</li>
+                        <li>Main Courses: Music Acoustics, Computer Music, Jazz Improvisation, Speech Signal Processing, Deep Learning, Reinforcement Learning</li>
+                    </ul>
+                </div>
+                <!-- More education items can be added here -->
+            </div>
         </section>
-        <section class="about-me">
-            <div class="section-title">个人信息</div>
-            <p>我是一名热情的软件工程师，拥有超过5年的行业经验。我擅长前端和后端开发，并且对新技术充满热情。</p>
+
+        <!-- PUBLICATIONS -->
+        <section class="section">
+            <h3 class="section-title">Publications</h3>
+            <div class="section-content">
+                <ul>
+                    <li>Yuetonghui Xu, Yiwen Wang, Xihong Wu, Xiaobing Li, Feng Yu. Enhanced String Quartet Separation Using Positional Cues (under review, Submitted to ICASSP 2025). Demo page: <a href="https://logicino.github.io/index.html">https://logicino.github.io/index.html</a></li>
+                    <!-- More publications can be added here -->
+                </ul>
+            </div>
         </section>
-        <section class="education">
-            <div class="section-title">教育背景</div>
-            <ul>
-                <li>
-                    <strong>软件工程硕士</strong> - 某知名大学（2018 - 2020）
-                    <p>主修课程包括：数据结构、算法、操作系统、网络等。</p>
-                </li>
-                <li>
-                    <strong>计算机科学学士</strong> - 另一知名大学（2014 - 2018）
-                    <p>GPA: 3.8/4.0，获得优秀毕业生称号。</p>
-                </li>
-            </ul>
+
+        <!-- INTERNSHIPS -->
+        <section class="section">
+            <h3 class="section-title">Internships</h3>
+            <div class="section-content">
+                <div class="intern-item">
+                    <h4>X Brain Inc., Jiangsu, China (2022.09 - 2024.07)</h4>
+                    <ul>
+                        <li>Algorithm Engineer for Intelligent Music</li>
+                        <!-- More details can be added here -->
+                    </ul>
+                </div>
+                <!-- More internships can be added here -->
+            </div>
         </section>
-        <section class="work-experience">
-            <div class="section-title">工作经验</div>
-            <ul>
-                <li>
-                    <strong>高级软件工程师</strong> - 某科技公司（2020 - 至今）
-                    <p>负责开发和维护公司的旗舰产品，使用最新的Web技术提高产品的用户体验。</p>
-                </li>
-                <li>
-                    <strong>软件工程师</strong> - 另一科技公司（2018 - 2020）
-                    <p>参与多个项目的开发，包括移动应用和Web应用，使用Java和React技术栈。</p>
-                </li>
-            </ul>
+
+        <!-- AWARDS & HONORS -->
+        <section class="section">
+            <h3 class="section-title">Awards and Honors</h3>
+            <div class="section-content">
+                <ul>
+                    <li>Merit Student, Excellent Graduate Student Cadre, Central Conservatory of Music (2023 & 2024)</li>
+                    <!-- More awards can be added here -->
+                </ul>
+            </div>
         </section>
-        <section class="skills">
-            <div class="section-title">技能</div>
-            <ul>
-                <li><strong>编程语言:</strong> JavaScript, Python, Java</li>
-                <li><strong>框架/库:</strong> React, Node.js, Django</li>
-                <li><strong>数据库:</strong> MySQL, MongoDB</li>
-                <li><strong>工具:</strong> Git, Docker, Jenkins</li>
-            </ul>
+
+        <!-- TECHNICAL SKILLS -->
+        <section class="section">
+            <h3 class="section-title">Technical Skills</h3>
+            <div class="section-content">
+                <ul>
+                    <li>Languages: Chinese (Native Speaker), English (Advanced), Japanese (Beginner)</li>
+                    <li>Programming: Python, C++, MATLAB, JavaScript/TypeScript</li>
+                    <!-- More skills can be added here -->
+                </ul>
+            </div>
         </section>
-        <section class="hobbies">
-            <div class="section-title">兴趣爱好</div>
-            <p>阅读、旅行、摄影、篮球。</p>
+
+        <!-- MUSICAL SKILLS -->
+        <section class="section">
+            <h3 class="section-title">Musical Skills</h3>
+            <div class="section-content">
+                <ul>
+                    <li>Skills: Amateur in Singing, Piano, Violin, Synthesizer, E-Guitar, E-Bass, etc, Arrangement, Mixing, DAWs: Logic, Supercollider etc.</li>
+                    <li>Social Media Account: LogicKino, <a href="https://space.bilibili.com/3575182">https://space.bilibili.com/3575182</a></li>
+                    <!-- More musical skills can be added here -->
+                </ul>
+            </div>
         </section>
     </div>
 </body>
